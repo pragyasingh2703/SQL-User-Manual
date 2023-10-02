@@ -1,0 +1,6 @@
+site_name: SQL User Manual 
+nav:
+  - 1. GENERAL INFORMATION: index.md
+  - 2. POSTGRESQL DATA MONITORING: page2.md
+  - 3. USING POSTGRESQL DATA MONITORING: page3.md
+theme: readthedocs
