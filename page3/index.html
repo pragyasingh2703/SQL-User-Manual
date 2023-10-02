@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>3. USING POSTGRESQL DATA MONITORING - SQL User Manual</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "3. USING POSTGRESQL DATA MONITORING";
+        var mkdocs_page_input_path = "page3.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> SQL User Manual
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">1. GENERAL INFORMATION</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../page2/">2. POSTGRESQL DATA MONITORING</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">3. USING POSTGRESQL DATA MONITORING</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#31-open-sre-insights">3.1 Open SRE Insights</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#32-homepage">3.2 Homepage</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#33-comprehensive-list-of-created-monitors">3.3 Comprehensive List of Created Monitors</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#34-creating-a-new-monitor-step-by-step-guide">3.4 Creating a New Monitor (Step by Step Guide)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#35-enhanced-monitoring-configuration">3.5 Enhanced Monitoring Configuration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#36-query-editor">3.6 Query Editor</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">SQL User Manual</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li class="breadcrumb-item active">3. USING POSTGRESQL DATA MONITORING</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="data-monitoring-user-manual">Data Monitoring User Manual</h1>
+<h3 id="31-open-sre-insights">3.1 Open SRE Insights</h3>
+<p>To open SRE Insights, follow these steps:</p>
+<ol>
+<li>Go to <a href="https://sreinsights.decurtis.app/">SRE Insights</a>.</li>
+<li>Click on the link, and you will be directed to the SRE INSIGHTS "Sign-in" window.</li>
+<li>Log in using your username and password, followed by a verification code.</li>
+<li>Upon successful login, you will land on the homepage.</li>
+</ol>
+<h3 id="32-homepage">3.2 Homepage</h3>
+<p><strong>Step 1:</strong> You have to click on the ' monitoring ' button located above to access Realtime insights and monitor performance.</p>
+<p><strong>Step 2:</strong>  After you will click on Monitoring, you will get an option of Data Monitoring. 
+You have to click on Data Monitoring</p>
+<h3 id="33-comprehensive-list-of-created-monitors">3.3 Comprehensive List of Created Monitors</h3>
+<p>Access the Comprehensive Monitor List to effortlessly manage, edit, and track your data monitoring efforts. When you click on "Data Monitoring," you'll go to a page that shows a list of all the monitors you've created. In this list, you will see:</p>
+<ul>
+<li>The Monitor's Name</li>
+<li>Repository</li>
+<li>Steps of what the monitor is doing</li>
+<li>Schedule: When it runs</li>
+<li>The person who created it</li>
+<li>The person who last modified it</li>
+<li>A switch to activate or deactivate the monitor</li>
+<li>Actions: Things you can do with the monitor, like editing or viewing its details</li>
+<li>You'll also see info about the last condition the monitor checked for, and you can quickly edit or view the monitor's details if needed.</li>
+</ul>
+<h3 id="34-creating-a-new-monitor-step-by-step-guide">3.4 Creating a New Monitor (Step by Step Guide)</h3>
+<p>Follow these simple steps to create a new monitoring system that fits your needs perfectly. It's easy to set up and customize.</p>
+<p><strong>Step 3:</strong> Open the Form Drawer to easily configure and set up a new monitor. To create a new monitor, just click the "Create Monitor" button in the top left corner. A form will pop up on the right side of your screen.</p>
+<h3 id="35-enhanced-monitoring-configuration">3.5 Enhanced Monitoring Configuration</h3>
+<p>Access the "Enhanced Monitoring Configuration" section.</p>
+<ul>
+<li>Utilize the Code Editor to make desired changes or configurations.</li>
+<li>Validate your configuration to ensure it meets your requirements and doesn't have any errors.</li>
+<li>Explore customization options to tailor the monitoring setup to your specific needs.</li>
+</ul>
+<p><strong>Step 4:</strong> Use the Code Editor in the form to write your query with ease.</p>
+<p><strong>Step 5:</strong> Validate your query by clicking the Validation Button to make sure it's error-free.</p>
+<p><strong>Step 6:</strong> Customize the Monitor Name and Alert Messages as needed.</p>
+<p><strong>Step 7:</strong> Benefit from pre-set default configurations to streamline the process.</p>
+<h3 id="36-query-editor">3.6 Query Editor</h3>
+<p>Use the Query Editor to write and check your counting queries. It will help catch errors and give you visual feedback as you work.</p>
+<p><strong>Step 8:</strong> In the Query Editor, you can only input counting queries.</p>
+<p><strong>Step 9:</strong> When you click "Validate," if your query has formatting issues, you'll see an error with a red Validate button.</p>
+<p><strong>Step 10:</strong> If your query is correctly formatted, the Validate button turns green, indicating successful validation.</p>
+<h1 id="creating-a-single-query">Creating a Single Query</h1>
+<p><strong>Step 11:</strong> Create a Valid Alert Name </p>
+<ul>
+<li>In the "Name" field, provide a unique name for the query.</li>
+<li>If a similar name has been used before, suggestions will appear automatically.</li>
+</ul>
+<p><strong>Step 12:</strong> Edit the Targeted Environment</p>
+<ul>
+<li>Choose the correct environment or setting to ensure it's valid and suitable for your task.</li>
+</ul>
+<p><strong>Step 13:</strong> Select Repository and Schema</p>
+<ul>
+<li>Select the repository.</li>
+<li>Repeat the same process as in Step 12 for the environment.</li>
+<li>Do the same for the Schema.</li>
+</ul>
+<p><strong>Step 14:</strong> Creating a Valid Query in the Query Box</p>
+<ul>
+<li>Write a query correctly in the Query Box to ensure it's valid and works as intended.</li>
+</ul>
+<p><strong>Step 15:</strong> Validate the Query</p>
+<ul>
+<li>After entering a valid query, the Validate Button will turn green, indicating successful validation.</li>
+</ul>
+<p><strong>Step 16:</strong> Handling Validation Errors</p>
+<ul>
+<li>If the query doesn't validate correctly, it will have a red background and unchecked boxes.</li>
+</ul>
+<p><strong>Step 17:</strong> Click the "Validate" Button</p>
+<ul>
+<li>Simply click on the "Validate" button.</li>
+</ul>
+<p><strong>Step 18:</strong> Customize Monitoring Settings</p>
+<ul>
+<li>Customize the monitoring settings for the environment, schedule, and frequency to match your specific needs.</li>
+<li>After clicking the "Validate" button, a dropdown menu will appear. Choose a valid schedule from the provided options by clicking on the "Schedule" button.</li>
+</ul>
+<h1 id="alert-scheduling-guide">Alert Scheduling Guide</h1>
+<p><strong>Step 19:</strong> Choose the Embark Day</p>
+<ol>
+<li>Click on the "Schedule" button.</li>
+<li>Options will appear for you to choose a valid schedule for you.</li>
+<li>Click on "Embark day".</li>
+</ol>
+<p><strong>Step 20:</strong> Select the Frequency</p>
+<ol>
+<li>Choose the appropriate or valid frequency for the alert.</li>
+</ol>
+<p><strong>Step 21:</strong> Set the Time</p>
+<ol>
+<li>After selecting the valid frequency, click on "At".</li>
+</ol>
+<p><strong>Step 22:</strong> Choose the Alert Time</p>
+<ol>
+<li>After clicking on "At", click on "Select time" to set a valid time period for the alert.</li>
+</ol>
+<p><strong>Step 23:</strong> Confirm and Schedule</p>
+<ol>
+<li>After selecting a valid time period for the alert, click on "OK" to confirm and schedule the alert.</li>
+</ol>
+<p><strong>Step 24:</strong> Define Alert Conditions</p>
+<ol>
+<li>After you click on "OK," come to RESULT COUNT.</li>
+<li>Determine the specific conditions under which you want to create an alert.</li>
+<li>Specify when not to create one by clicking "not equal" or "equal."</li>
+</ol>
+<h1 id="data-monitoring-alert-setup">Data Monitoring Alert Setup</h1>
+<p><strong>Step 25:</strong> Define Alert Trigger Condition</p>
+<p>After selecting the condition under which you want to create an alert, decide at what point or level you want to trigger the alert.</p>
+<p><strong>Step 26:</strong> Edit Alert Message</p>
+<p>Modify the alert message to ensure it's appropriate and valid for the data monitoring alert, based on the alert query.</p>
+<p><strong>Step 27:</strong> Confirmation of Monitor Creation</p>
+<p>After modifying the alert message, when you add a monitor, a pop-up message will appear to confirm that the monitor was successfully created. Once you click the 'Add Monitor' button, you'll see a pop-up message in the bottom left corner confirming that the monitoring task was successfully created.</p>
+<p><strong>Step 28:</strong> Alert Successfully Created</p>
+<p>The alert has been created successfully. After adding the monitor by clicking on create, a "Data Monitor created" pop-up will appear to confirm that the alert has been successfully created.</p>
+<h2 id="data-monitor-created">Data Monitor Created!!</h2>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../page2/" class="btn btn-neutral float-left" title="2. POSTGRESQL DATA MONITORING"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../page2/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
