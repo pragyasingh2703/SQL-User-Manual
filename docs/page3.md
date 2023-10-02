@@ -38,7 +38,7 @@ Follow these simple steps to create a new monitoring system that fits your needs
 
 **Step 3:** Open the Form Drawer to easily configure and set up a new monitor. To create a new monitor, just click the "Create Monitor" button in the top left corner. A form will pop up on the right side of your screen.
 Hii my nanme
-<!-- HII PRAGYA kkkkkkkk-->
+
 
 ### 3.5 Enhanced Monitoring Configuration
 
