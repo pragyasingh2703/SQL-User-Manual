@@ -37,6 +37,9 @@ Access the Comprehensive Monitor List to effortlessly manage, edit, and track yo
 Follow these simple steps to create a new monitoring system that fits your needs perfectly. It's easy to set up and customize.
 
 **Step 3:** Open the Form Drawer to easily configure and set up a new monitor. To create a new monitor, just click the "Create Monitor" button in the top left corner. A form will pop up on the right side of your screen.
+
+<!-- HII PRAGYA -->
+
 ### 3.5 Enhanced Monitoring Configuration
 
 Access the "Enhanced Monitoring Configuration" section.
